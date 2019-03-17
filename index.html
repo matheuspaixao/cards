@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>UI Cards</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.adaptive-backgrounds.js"></script>
+	<script type="text/javascript" src="js/color-thief.min.js"></script>	
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm">
+				<div class="card">
+				  <img class="card-img-top" src="img/house1.jpg">
+				  <div class="card-body">
+				    <h5 class="card-title">House title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  </div>
+				</div>
+			</div>
+
+			<div class="col-sm">
+				<div class="card">
+				  <img class="card-img-top" src="img/house2.jpg" st>
+				  <div class="card-body">
+				    <h5 class="card-title">House title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  </div>
+				</div>
+			</div>
+
+			<div class="col-sm">
+				<div class="card">
+				  <img class="card-img-top" src="img/house3.jpg">
+				  <div class="card-body">
+				    <h5 class="card-title">House title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		$(document).on("click", '.card-img-top', function(){
+			return;
+			var colorThief = new ColorThief();
+		  	var image = new Image;
+			var result = $(this).attr('src');
+			image.src = result;
+			image.crossOrigin = "Anonymous";
+			var color = colorThief.getColor(image);
+			console.log(image);
+		});
+	</script>
+</body>
+</html>
